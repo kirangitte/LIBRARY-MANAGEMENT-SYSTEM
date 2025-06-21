@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Navigation Bar</title>
+     <link rel="stylesheet" href="style3.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+     <nav class="bg-gray-800 bg-opacity-80 p-4 shadow-md rounded-b-lg">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                <div class="text-white text-2xl font-bold mb-4 md:mb-0">📚 Tech Hub Library</div>
+                <div class="flex flex-wrap justify-center space-x-0 md:space-x-4 space-y-2 md:space-y-0">
+                     <a href="/home" class="navbar-item text-white hover:text-blue-300">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13.5m0-13.5c-4.478 0-8.268 2.943-9.543 7a9.97 9.97 0 00.51 3.5M12 6.253c4.478 0 8.268 2.943 9.543 7a9.97 9.97 0 01-.51 3.5M12 6.253V19.75m0-13.5c-1.01 0-1.97-.247-2.835-.689M12 6.253c1.01 0 1.97-.247 2.835-.689"></path></svg>
+                        Home
+                    </a>
+                    <a href="/addBook" class="navbar-item text-white hover:text-blue-300">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Add Book
+                    </a>
+                    <a href="/viewbooks" class="navbar-item text-white hover:text-blue-300">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+                        View Books
+                    </a>
+                    <a href="/viewUser" class="navbar-item text-white hover:text-blue-300">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a3 3 0 015.356-1.857M17 20v-2c0-.653-.16-1.285-.467-1.843m0 0C16.29 14.996 17 13.535 17 12a5 5 0 00-10 0c0 1.535.71 3.004 1.933 4.157m0 0c-.08-.04-.158-.084-.237-.13A6.974 6.974 0 0112 10a6.974 6.974 0 013.307 3.208c-.079.046-.157.09-.237.13M12 14v1"></path></svg>
+                        View Users
+                    </a>
+                    <a href="/reports" class="navbar-item text-white hover:text-blue-300">
+                        <svg class="w-5 h-5 mr-" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-4m-2.835 1.5l-1.415 1.415M13 17v-4m-2.835 1.5l1.415 1.415M12 16L9 20h6l-3-4zM8 4a2 2 0 00-2 2v1H4a2 2 0 00-2 2v2a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-2V6a2 2 0 00-2-2H8z"></path></svg>
+                        Reports
+                    </a>
+                    <a href="/logout" class="navbar-item text-white hover:text-red-400">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Book</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style3.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <%- include("adminNavBar.ejs") %>
+
+  <div class="flex justify-center items-center min-h-[80vh] px-4">
+    <div class="bg-white bg-opacity-90 shadow-lg rounded-lg p-8 w-full max-w-md">
+      <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Edit Book</h2>
+
+      <form action="/updatebook/<%= book.id %>" method="POST">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Title</label>
+          <input type="text" name="title" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" value="<%= book.title %>" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Author</label>
+          <input type="text" name="author" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" value="<%= book.author %>" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Publisher</label>
+          <input type="text" name="publisher" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" value="<%= book.publisher %>">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">ISBN</label>
+          <input type="text" name="isbn" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" value="<%= book.isbn %>">
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2">Category</label>
+          <input type="text" name="category" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" value="<%= book.category %>">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2">Image URL</label>
+          <input type="text" name="image" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" value="<%= book.image || '' %>">
+          <% if (book.image) { %>
+            <img src="<%= book.image %>" alt="Book Image" class="mt-2 max-h-32 mx-auto rounded shadow">
+          <% } %>
+        </div>
+
+        <div class="flex justify-center">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+            Update Book
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

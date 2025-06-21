@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <%- include("adminNavBar.ejs") %>
+    <div class="flex justify-center items-center min-h-[80vh] px-4">
+        <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+            <h2 class="text-2xl font-bold text-center text-indigo-700 mb-6">Update Issued Book Report</h2>
+            <form action="/updateReport/<%= report.id %>" method="POST" class="space-y-4">
+                <div>
+                    <label class="block font-semibold mb-1">Book Name (ID: <%= report.book_id %>)</label>
+                    <input type="text" name="book_id" class="w-full border border-gray-300 rounded-lg p-2" value="<%= report.book_id %>" required>
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">User Name (ID: <%= report.issued_by %>)</label>
+                    <input type="text" name="issued_by" class="w-full border border-gray-300 rounded-lg p-2" value="<%= report.issued_by %>" required>
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Issue Date</label>
+                    <input type="date" name="issue_date" class="w-full border border-gray-300 rounded-lg p-2" value="<%= report.issue_date.toISOString().slice(0,10) %>" required>
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Return Date</label>
+                    <input type="date" name="return_date" class="w-full border border-gray-300 rounded-lg p-2" value="<%= report.return_date.toISOString().slice(0,10) %>" required>
+                </div>
+                <div class="text-center pt-4">
+                    <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

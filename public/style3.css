@@ -1,0 +1,78 @@
+body {
+            background-image: url("../public/images/home.jpg"); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            font-family: 'Inter', sans-serif; 
+        }
+        
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6); 
+            min-height: 100vh;
+            padding-bottom: 2rem; 
+        }
+        .navbar-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .navbar-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+    
+
+     
+    /* style3.css */
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: url("/images/home.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #070a0f;
+  box-shadow: 0 0 0 1px #acb5c9;
+}
+
+ .profile-card {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+        .profile-label {
+            font-weight: bold;
+        }
+        .edit-form {
+            display: none;
+        }
+
+.card {
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+label {
+  font-weight: 500;
+}
