@@ -49,11 +49,17 @@ exports.login = (req, res) => {
             maxAge: 3600000 // 1 hour
         });
 
+        // if (role === "admin") {
+        //     res.render("adminboard.ejs");
+        // } else {
+        //     res.render("studentboard.ejs"); 
+        // }
+
         if (role === "admin") {
-            res.render("adminboard.ejs");
-        } else {
-            res.render("studentboard.ejs"); 
-        }
+    res.redirect("/admin-home");
+} else {
+    res.redirect("/user-home");
+}
     });
 };
 exports.deleteUserById = userModel.deleteUserById;
