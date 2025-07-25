@@ -13,6 +13,7 @@ const reportRouter = require("../src/routers/reportRouter");
 const app = express();
 
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "src", "views")); // ✅ FIXED
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
